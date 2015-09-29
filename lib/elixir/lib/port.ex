@@ -35,7 +35,7 @@ defmodule Port do
 
   Inlined by the compiler.
   """
-  @spec close(port) :: true
+  @spec close(port) :: true | no_return
   def close(port) do
     :erlang.port_close(port)
   end
@@ -59,7 +59,7 @@ defmodule Port do
 
   Inlined by the compiler.
   """
-  @spec connect(port, pid) :: true
+  @spec connect(port, pid) :: true | no_return
   def connect(port, pid) do
     :erlang.port_connect(port, pid)
   end
